@@ -2393,3 +2393,1063 @@ UndefinedError: 'post' is undefined
 2017-01-17 14:51:46,443 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:25]
 2017-01-17 14:53:53,502 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:25]
 2017-01-17 14:53:53,765 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:25]
+2017-01-20 00:25:39,707 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 00:25:53,178 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 00:25:53,497 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 15:37:06,068 INFO: microblog startup [in app/__init__.py:39]
+2017-01-20 15:39:31,202 INFO: microblog startup [in app/__init__.py:39]
+2017-01-20 15:40:59,820 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 15:41:00,121 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 17:43:23,784 INFO: microblog startup [in app/__init__.py:39]
+2017-01-20 17:43:54,279 INFO: microblog startup [in app/__init__.py:39]
+2017-01-20 17:44:45,074 INFO: microblog startup [in app/__init__.py:39]
+2017-01-20 20:52:05,079 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:52:05,423 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:52:45,302 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:52:50,292 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:52:50,575 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:53:14,676 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:53:17,656 ERROR: Exception on / [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:53:17,698 ERROR: Exception on /favicon.ico [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:53:20,819 ERROR: Exception on / [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:53:21,822 ERROR: Exception on /login [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:53:22,327 ERROR: Exception on /login [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:53:22,357 ERROR: Exception on /login [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:53:25,905 ERROR: Exception on / [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:53:26,432 ERROR: Exception on /index [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:53:26,908 ERROR: Exception on /index [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:56:39,839 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:56:41,817 ERROR: Exception on /index [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:57:52,520 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:57:54,004 ERROR: Exception on /index [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:58:10,128 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:58:12,899 ERROR: Exception on /index [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-20 20:58:33,847 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-20 20:58:36,809 ERROR: Exception on /index [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-21 20:12:43,434 ERROR: Exception on /index [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-22 12:46:37,745 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-22 12:47:05,165 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-22 12:47:11,087 INFO: microblog startup [in /Users/nicholas/projects/microblog/app/__init__.py:39]
+2017-01-22 12:52:52,875 ERROR: Exception on / [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-22 12:52:54,992 ERROR: Exception on /login [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
+2017-01-22 12:52:58,438 ERROR: Exception on /login [GET] [in /Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1610, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask/app.py", line 1831, in preprocess_request
+    rv = func()
+  File "/Users/nicholas/projects/microblog/app/views.py", line 18, in before_request
+    if g.user.is_authenticated:
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/werkzeug/local.py", line 302, in _get_current_object
+    return self.__local()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/utils.py", line 302, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 311, in _load_user
+    return self._load_from_cookie(request.cookies[cookie_name])
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 350, in _load_from_cookie
+    self.reload_user()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/flask_login/login_manager.py", line 279, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/nicholas/projects/microblog/app/views.py", line 12, in load_user
+    return User.query.get(int(id))
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 831, in get
+    return self._get_impl(ident, loading.load_on_ident)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 864, in _get_impl
+    return fallback_fn(self, key)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/loading.py", line 223, in load_on_ident
+    return q.one()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2756, in one
+    ret = self.one_or_none()
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2726, in one_or_none
+    ret = list(self)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2797, in __iter__
+    return self._execute_and_instances(context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/orm/query.py", line 2820, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+    exc_info
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 202, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+    context)
+  File "/Users/nicholas/projects/microblog/flask/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 469, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such column: user.about_me [SQL: u'SELECT user.id AS user_id, user.nickname AS user_nickname, user.email AS user_email, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.id = ?'] [parameters: (2,)]
